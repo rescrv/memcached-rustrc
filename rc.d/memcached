@@ -1,0 +1,5 @@
+#!/usr/bin/env rcscript
+
+DESCRIBE=A single memcached instance.
+COMMAND=python3 -c 'import sys; print(["memcached"] + sys.argv[1:])' \
+    -v ${HOST:+-i ${HOST}} ${PORT:+-p ${PORT}}
